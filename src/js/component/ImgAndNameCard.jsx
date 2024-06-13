@@ -1,6 +1,6 @@
 import React from "react";
 
-const CharactersInfoCard = ({ name, id }) => {
+const ImageAndNameCard = ({ name, id }) => {
   return (
     <>
       <img
@@ -15,4 +15,4 @@ const CharactersInfoCard = ({ name, id }) => {
   );
 };
 
-export default CharactersInfoCard;
+export default ImageAndNameCard;

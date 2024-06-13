@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
-import StarWars from "../component/StarWars.jsx";
+import { Context } from "../store/appContext.js";
+import MapGeneral from "../component/MapGeneral.jsx";
 import Title from "../component/Title.jsx";
 
-const CharactersInfo = () => {
+const UnifiedPage = () => {
   const { store } = useContext(Context);
 
   return (
     <div className="container">
       <Title title={"Personajes"} nameBtn={"Home"} />
-      <StarWars elements={store.characters} />
+      <MapGeneral elements={store.characters} />
       <br />
     </div>
   );
 };
 
-export default CharactersInfo;
+export default UnifiedPage;
