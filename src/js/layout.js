@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import CharactersInfo from "./views/CharactersInfo.jsx";
+import Planets from "./views/Planets.jsx";
 import { Home } from "./views/home";
 
 import injectContext from "./store/appContext";
@@ -18,6 +19,7 @@ const Layout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<CharactersInfo />} />
+          <Route path="/planets" element={<Planets />} />
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
       </BrowserRouter>
