@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop.js";
 
 import CharactersInfo from "./views/CharactersInfo.jsx";
 import { Home } from "./views/home";
@@ -16,13 +15,11 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
-        <ScrollToTop>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/characters" element={<CharactersInfo />} />
-            <Route path="*" element={<h1>Not found!</h1>} />
-          </Routes>
-        </ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters" element={<CharactersInfo />} />
+          <Route path="*" element={<h1>Not found!</h1>} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
