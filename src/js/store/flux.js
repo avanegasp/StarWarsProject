@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       apiUrl: "https://www.swapi.tech/api/people",
-      characters: [], // Definir la propiedad characters en el store
+      characters: [],
+      planets: [],
     },
     actions: {
       getCharacters: async () => {
