@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       apiUrl: "https://www.swapi.tech/api/",
       characters: [],
       planets: [],
+      vehicles: [],
     },
     actions: {
       getCharacters: async () => {
@@ -33,6 +34,21 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({ planets: data.results });
         } catch (e) {
           console.error("Error fetching planets:", e);
+        }
+      },
+
+      getVehicles: async () => {
+        const store = getStore();
+        try {
+          const response = await fetch(store.apiUrl + "vehicles");
+          if (!response.ok) {
+            throw new Error("No se puede traer los vehículos");
+          }
+          const data = await response.json();
+          console.log("data results desde vehicles", data.results);
+          setStore({ vehicles: data.results });
+        } catch (e) {
+          console.error("Error fetching vehicles:", e);
         }
       },
     },

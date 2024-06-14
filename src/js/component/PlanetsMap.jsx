@@ -5,8 +5,17 @@ import ImgAndNameCard from "./Card.jsx";
 const MapGeneralPlanets = () => {
   const { store } = useContext(Context);
 
-  const startCountingId = (id) => {
-    return id >= 1;
+  const startCountingIdPlanets = (id) => {
+    if (id >= 1) {
+      console.log("El ID es mayor a 2 en planets");
+      for (let i = 2; i <= 11; i++) {
+        console.log(i);
+      }
+      return id >= 1 && id <= 11;
+    } else {
+      console.log("El ID es 2 desde planets");
+      return false;
+    }
   };
 
   return (
@@ -14,15 +23,15 @@ const MapGeneralPlanets = () => {
       {store.planets.map((element, index) => (
         <div className="d-inline-flex col-2 mt-5" key={index}>
           <div className="card text-center" style={{ width: "18rem" }}>
-            {startCountingId(element.uid) ? (
+            {startCountingIdPlanets(element.uid) && (
               <ImgAndNameCard
-                // key={element.uid}
+                key={element.uid}
                 name={element.name}
-                id={index + 1}
+                id={element.uid}
                 urlName="planets"
-                altName="Planets"
+                altName="planets"
               />
-            ) : null}
+            )}
           </div>
         </div>
       ))}

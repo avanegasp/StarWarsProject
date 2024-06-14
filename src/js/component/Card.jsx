@@ -4,7 +4,10 @@ const ImgAndNameCard = ({ name, id, urlName, altName }) => {
   return (
     <>
       <img
-        src={`https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg`}
+        src={
+          `https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg` ||
+          "https://picsum.photos/id/237/200/300"
+        }
         className="card-img-top"
         alt={altName}
       />
