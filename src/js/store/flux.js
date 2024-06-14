@@ -15,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer los personajes");
           }
           const data = await response.json();
-          console.log("Esto es dataCharacters", data.results);
+          console.log("Esto es data results desde characters", data.results);
           setStore({ characters: data.results });
         } catch (e) {
           console.error("Error fetching characters:", e);
@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer los vehículos");
           }
           const data = await response.json();
-          console.log("data results desde vehicles", data.results);
+          console.log("esto es data results desde vehicles", data.results);
           setStore({ vehicles: data.results });
         } catch (e) {
           console.error("Error fetching vehicles:", e);

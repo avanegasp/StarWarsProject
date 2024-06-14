@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ImgAndNameCard from "./Card.jsx";
+import Card from "./Card.jsx";
 
 const MapGeneralVehicles = ({ elements }) => {
   return (
@@ -7,7 +7,7 @@ const MapGeneralVehicles = ({ elements }) => {
       {elements.map((element) => (
         <div className="d-inline-flex col-2 mt-5" key={element.uid}>
           <div className="card text-center" style={{ width: "18rem" }}>
-            <ImgAndNameCard
+            <Card
               name={element.name}
               id={element.uid}
               urlName="vehicles"

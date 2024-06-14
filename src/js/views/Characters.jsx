@@ -3,16 +3,15 @@ import { Context } from "../store/appContext.js";
 import MapGeneralCharacters from "../component/CharactersMap.jsx";
 import Title from "../component/Title.jsx";
 
-const UnifiedPage = () => {
+const Characters = () => {
   const { store } = useContext(Context);
 
   return (
     <div className="container">
       <Title title={"Personajes"} nameBtn={"Home"} />
       <MapGeneralCharacters elements={store.characters} />
-      <br />
     </div>
   );
 };
 
-export default UnifiedPage;
+export default Characters;

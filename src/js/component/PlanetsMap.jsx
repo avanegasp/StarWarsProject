@@ -1,31 +1,22 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
-import ImgAndNameCard from "./Card.jsx";
+import Card from "./Card.jsx";
 
 const MapGeneralPlanets = () => {
   const { store } = useContext(Context);
 
-  const startCountingIdPlanets = (id) => {
-    if (id >= 1) {
-      console.log("El ID es mayor a 2 en planets");
-      for (let i = 2; i <= 11; i++) {
-        console.log(i);
-      }
-      return id >= 1 && id <= 11;
-    } else {
-      console.log("El ID es 2 desde planets");
-      return false;
-    }
-  };
-
   return (
     <>
-      {store.planets.map((element, index) => (
-        <div className="d-inline-flex col-2 mt-5" key={index}>
+      {store.planets.map((element) => (
+        <div className="d-inline-flex col-2 mt-5" key={element.uid}>
           <div className="card text-center" style={{ width: "18rem" }}>
-            {startCountingIdPlanets(element.uid) && (
-              <ImgAndNameCard
-                key={element.uid}
+            {element.uid === 1 ? (
+              <img
+                src="https://starwars-visualguide.com/assets/img/planets/2.jpg"
+                alt="Tatooine"
+              />
+            ) : (
+              <Card
                 name={element.name}
                 id={element.uid}
                 urlName="planets"

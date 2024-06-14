@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import UnifiedPage from "./views/UnifiedPage.jsx";
+import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
 import Vehicles from "./views/Vehicles.jsx";
 
@@ -20,7 +20,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/characters" element={<UnifiedPage />} />
+          <Route path="/characters" element={<Characters />} />
           <Route path="/planets" element={<Planets />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route path="*" element={<h1>Not found!</h1>} />

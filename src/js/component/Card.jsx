@@ -1,13 +1,10 @@
 import React from "react";
 
-const ImgAndNameCard = ({ name, id, urlName, altName }) => {
+const Card = ({ name, id, urlName, altName }) => {
   return (
     <>
       <img
-        src={
-          `https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg` ||
-          "https://picsum.photos/id/237/200/300"
-        }
+        src={`https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg`}
         className="card-img-top"
         alt={altName}
       />
@@ -18,4 +15,4 @@ const ImgAndNameCard = ({ name, id, urlName, altName }) => {
   );
 };
 
-export default ImgAndNameCard;
+export default Card;
