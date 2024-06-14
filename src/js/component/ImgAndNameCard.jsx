@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageAndNameCard = ({ name, id, urlName, altName }) => {
+const ImgAndNameCard = ({ name, id, urlName, altName }) => {
   return (
     <>
       <img
@@ -15,4 +15,4 @@ const ImageAndNameCard = ({ name, id, urlName, altName }) => {
   );
 };
 
-export default ImageAndNameCard;
+export default ImgAndNameCard;
