@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
 import Vehicles from "./views/Vehicles.jsx";
-
 import { Home } from "./views/home";
+
+import Navbar from "./component/Nabvar.jsx";
 
 import injectContext from "./store/appContext";
 
@@ -18,6 +19,7 @@ const Layout = () => {
   return (
     <div>
       <BrowserRouter basename={basename}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<Characters />} />

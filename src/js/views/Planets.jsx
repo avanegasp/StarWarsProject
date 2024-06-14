@@ -8,7 +8,7 @@ const Planets = () => {
 
   return (
     <div className="container">
-      <Title title="Planets" nameBtn="Home" />
+      <Title title="Planets" />
       <MapGeneralPlanets elements={store.planets} />
     </div>
   );
