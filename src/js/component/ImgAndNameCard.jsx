@@ -1,12 +1,12 @@
 import React from "react";
 
-const ImageAndNameCard = ({ name, id }) => {
+const ImageAndNameCard = ({ name, id, urlName, altName }) => {
   return (
     <>
       <img
-        src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+        src={`https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg`}
         className="card-img-top"
-        alt="characters"
+        alt={altName}
       />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
