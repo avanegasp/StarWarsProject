@@ -12,8 +12,11 @@ export const Home = () => (
     <Link to="/characters" className="btn btn-dark me-5">
       Characters
     </Link>
-    <Link to="/planets" className="btn btn-dark">
+    <Link to="/planets" className="btn btn-dark me-5">
       Planets
+    </Link>
+    <Link to="/vehicles" className="btn btn-dark">
+      Vehicles
     </Link>
   </div>
 );

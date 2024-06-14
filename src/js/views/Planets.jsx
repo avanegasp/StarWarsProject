@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
 import Title from "../component/Title.jsx";
-import ImgAndNameCard from "../component/ImgAndNameCard.jsx";
+import ImgAndNameCard from "../component/Card.jsx";
 import MapGeneralPlanets from "../component/MapGeneralPlanets.jsx";
 
 const Planets = () => {

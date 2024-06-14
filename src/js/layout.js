@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import UnifiedPage from "./views/UnifiedPage.jsx";
 import Planets from "./views/Planets.jsx";
+import Vehicles from "./views/Vehicles.jsx";
+
 import { Home } from "./views/home";
 
 import injectContext from "./store/appContext";
@@ -20,6 +22,7 @@ const Layout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<UnifiedPage />} />
           <Route path="/planets" element={<Planets />} />
+          <Route path="/vehicles" element={<Vehicles />} />
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
       </BrowserRouter>

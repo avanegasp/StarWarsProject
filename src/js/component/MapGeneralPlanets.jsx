@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
-import ImgAndNameCard from "./ImgAndNameCard.jsx";
+import ImgAndNameCard from "./Card.jsx";
 
 const MapGeneralPlanets = () => {
   const { store } = useContext(Context);
