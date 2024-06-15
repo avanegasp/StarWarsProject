@@ -9,7 +9,10 @@ const MapGeneralCharacters = ({ elements }) => {
           <div className="card text-center" style={{ width: "18rem" }}>
             <Card
               name={element.name}
-              id={element.uid}
+              gender={element.gender}
+              hair_color={element.hair_color}
+              eye_color={element.eye_color}
+              id={element.url.split("/")[5]}
               urlName="characters"
               altName="Characters"
             />

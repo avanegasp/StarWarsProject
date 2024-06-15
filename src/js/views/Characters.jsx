@@ -8,7 +8,7 @@ const Characters = () => {
 
   return (
     <div className="container">
-      <Title title={"Personajes"} />
+      <Title title={"Characters"} />
       <MapGeneralCharacters elements={store.characters} />
     </div>
   );
