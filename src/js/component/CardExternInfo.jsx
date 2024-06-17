@@ -26,7 +26,6 @@ const CardExternInfo = ({
   async function handleLearnMoreClick() {
     await actions.getCharacter(id);
     navigate(`/cardDetail${urlName}/${id}`);
-    // navigate(`/cardDetailCharacters/${id}`);
   }
 
   return (
