@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import UrlVisualGuide from "./Url_Image.jsx";
 
 const Card = ({
   name,
@@ -13,18 +15,17 @@ const Card = ({
   model,
   manufacturer,
 }) => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate(`/infoDetailCharacter/${id}`);
+  };
+
   return (
     <>
-      <img
-        src={`https://starwars-visualguide.com/assets/img/${urlName}/${id}.jpg`}
-        className="card-img-top"
-        alt={altName}
-      />
+      <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
-        {/* <h6 className="card-subtitle mb-2 text-body-secondary">
-          Card subtitle
-        </h6> */}
         {gender ? <p className="card-text">Gender: {gender}</p> : null}
         {hair_color ? (
           <p className="card-text">Hair color: {hair_color}</p>
@@ -33,16 +34,15 @@ const Card = ({
         {population ? (
           <p className="card-text">Population: {population}</p>
         ) : null}
-        {terrain ? <p className="card-text"> Terrain:{terrain}</p> : null}
+        {terrain ? <p className="card-text"> Terrain: {terrain}</p> : null}
         {model ? <p className="card-text">Model: {model}</p> : null}
         {manufacturer ? (
           <p className="card-text">Manufacturer: {manufacturer}</p>
         ) : null}
         <div>
-          <a href="#" className="btn btn-dark me-1">
+          <button onClick={handleLearnMoreClick} className="btn btn-dark me-1">
             Learn More
-          </a>
-
+          </button>
           <a href="#" className="btn btn-dark">
             Fav
           </a>
