@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
 
@@ -15,11 +16,13 @@ const Card = ({
   model,
   manufacturer,
 }) => {
+  const { actions } = useContext(Context);
   const navigate = useNavigate();
 
-  const handleLearnMoreClick = () => {
-    navigate(`/infoDetailCharacter/${id}`);
-  };
+  async function handleLearnMoreClick() {
+    await actions.getCharacter(id);
+    navigate(`/cardDetailCharacter/${id}`);
+  }
 
   return (
     <>

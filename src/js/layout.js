@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
 import Vehicles from "./views/Vehicles.jsx";
-import InfoDetailCharacter from "./views/InfoDetail.jsx"; // Asegúrate de que la ruta a InfoDetailCharacter sea correcta
+import CardDetailCharacter from "./views/CardDetailCharacter.jsx";
 import { Home } from "./views/home";
 
 import Navbar from "./component/Nabvar.jsx";
@@ -24,8 +24,8 @@ const Layout = () => {
           <Route path="/planets" element={<Planets />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route
-            path="/infoDetailCharacter/:id"
-            element={<InfoDetailCharacter />}
+            path="/cardDetailCharacter/:id"
+            element={<CardDetailCharacter />}
           />{" "}
           {/* Ruta dinámica con :id */}
           <Route path="*" element={<h1>Not found!</h1>} />
