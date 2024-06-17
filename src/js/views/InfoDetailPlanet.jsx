@@ -14,7 +14,7 @@ const InfoDetailPlanet = ({
       <div className="row mt-5 mb-5">
         <div className="card col-12">
           <div className="row">
-            <div className="col-5">
+            <div className="col-5 mt-2">
               <UrlImage id={id} urlName="planets" altName="Planet" />
             </div>
             <div className="col-7 mt-5">

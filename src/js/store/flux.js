@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       apiUrl: "https://swapi.dev/api/",
       characters: [],
       planets: [],
-      vehicles: [],
+      starships: [],
       character: {},
       planet: {},
     },
@@ -76,15 +76,15 @@ const getState = ({ getStore, getActions, setStore }) => {
       getVehicles: async () => {
         const store = getStore();
         try {
-          const response = await fetch(`${store.apiUrl}vehicles/`);
+          const response = await fetch(`${store.apiUrl}starships/`);
           if (!response.ok) {
             throw new Error("No se puede traer los vehículos");
           }
           const data = await response.json();
           // console.log("esto es data results desde vehicles", data.results);
-          setStore({ vehicles: data.results });
+          setStore({ starships: data.results });
         } catch (e) {
-          console.error("Error fetching vehicles:", e);
+          console.error("Error fetching starships:", e);
         }
       },
     },

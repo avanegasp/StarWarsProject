@@ -14,7 +14,7 @@ export const Home = () => (
         Planets
       </Link>
       <Link to="/vehicles" className="btn btn-dark">
-        Vehicles
+        Starships
       </Link>
     </div>
     <p>

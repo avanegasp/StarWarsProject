@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Card from "./CardExternInfo.jsx";
 
-const MapGeneralVehicles = ({ elements }) => {
+const MapGeneralStarships = ({ elements }) => {
   return (
     <>
       {elements.map((element, index) => (
@@ -10,8 +10,8 @@ const MapGeneralVehicles = ({ elements }) => {
             <Card
               name={element.name}
               id={element.url.split("/")[5]}
-              urlName="vehicles"
-              altName="Vehicles"
+              urlName="starships"
+              altName="Starships"
               model={element.model}
               manufacturer={element.manufacturer}
             />
@@ -21,4 +21,4 @@ const MapGeneralVehicles = ({ elements }) => {
     </>
   );
 };
-export default MapGeneralVehicles;
+export default MapGeneralStarships;

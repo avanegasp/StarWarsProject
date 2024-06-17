@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
-import Vehicles from "./views/Vehicles.jsx";
+import Starships from "./views/Starships.jsx";
 import CardDetailCharacter from "./views/CardDetailCharacter.jsx";
 import CardDetailPlanet from "./views/CardDetailPlanet.jsx";
 import { Home } from "./views/home";
@@ -23,7 +23,7 @@ const Layout = () => {
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<Characters />} />
           <Route path="/planets" element={<Planets />} />
-          <Route path="/vehicles" element={<Vehicles />} />
+          <Route path="/starships" element={<Starships />} />
           <Route
             path="/cardDetailCharacters/:id"
             element={<CardDetailCharacter />}
