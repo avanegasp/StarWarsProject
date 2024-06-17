@@ -18,7 +18,7 @@ const InfoDetailCharacter = ({
         <div className="card col-12">
           <div className="row">
             <div className="col-5">
-              <UrlImage id={id} urlName="characters" altName="CHARACTER" />
+              <UrlImage id={id} urlName="characters" altName="Character" />
             </div>
             <div className="col-7 mt-5">
               <h3 className="text-center">

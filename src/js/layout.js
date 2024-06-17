@@ -5,6 +5,7 @@ import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
 import Vehicles from "./views/Vehicles.jsx";
 import CardDetailCharacter from "./views/CardDetailCharacter.jsx";
+import CardDetailPlanet from "./views/CardDetailPlanet.jsx";
 import { Home } from "./views/home";
 
 import Navbar from "./component/Nabvar.jsx";
@@ -24,9 +25,10 @@ const Layout = () => {
           <Route path="/planets" element={<Planets />} />
           <Route path="/vehicles" element={<Vehicles />} />
           <Route
-            path="/cardDetailCharacter/:id"
+            path="/cardDetailCharacters/:id"
             element={<CardDetailCharacter />}
-          />{" "}
+          />
+          <Route path="/cardDetailPlanets/:id" element={<CardDetailPlanet />} />
           {/* Ruta dinámica con :id */}
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>

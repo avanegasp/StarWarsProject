@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card.jsx";
+import Card from "./CardExternInfo.jsx";
 
 const MapGeneralCharacters = ({ elements }) => {
   return (

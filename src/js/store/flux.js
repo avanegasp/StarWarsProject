@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
       vehicles: [],
       character: {},
+      planet: {},
     },
     actions: {
       getCharacter: async (id) => {
@@ -21,7 +22,24 @@ const getState = ({ getStore, getActions, setStore }) => {
             character: data,
           });
         } catch (e) {
-          console.error("Error fetching characters:", e);
+          console.error("Error fetching character:", e);
+        }
+      },
+
+      getPlanet: async (id) => {
+        const store = getStore();
+        try {
+          const response = await fetch(`${store.apiUrl}planets/${id}`);
+          if (!response.ok) {
+            throw new Error("No se puede traer los planetas");
+          }
+          const data = await response.json();
+          console.log("Esto es desde Planet sin S", data);
+          setStore({
+            planet: data,
+          });
+        } catch (error) {
+          console.error("Error fetching planet:", e);
         }
       },
 

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Card from "./Card.jsx";
+import Card from "./CardExternInfo.jsx";
 
 const MapGeneralVehicles = ({ elements }) => {
   return (

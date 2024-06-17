@@ -3,7 +3,7 @@ import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
 
-const Card = ({
+const CardExternInfo = ({
   name,
   id,
   urlName,
@@ -19,9 +19,14 @@ const Card = ({
   const { actions } = useContext(Context);
   const navigate = useNavigate();
 
+  // 1. Recibir un prop que identifique si es characters, planets....
+  // 2. Generar rutas para diferenciar entre planets, characters....
+  // 3. Hacer un template literal que pase el prop para tener una url dinamica
+
   async function handleLearnMoreClick() {
     await actions.getCharacter(id);
-    navigate(`/cardDetailCharacter/${id}`);
+    navigate(`/cardDetail${urlName}/${id}`);
+    // navigate(`/cardDetailCharacters/${id}`);
   }
 
   return (
@@ -55,4 +60,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default CardExternInfo;
