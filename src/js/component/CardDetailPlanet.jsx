@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext.js";
-import InfoDetailPlanet from "./InfoDetailPlanet.jsx";
+import InfoDetailPlanet from "../views/InfoDetailPlanet.jsx";
 
 const CardDetailPlanet = () => {
   const { store, actions } = useContext(Context);

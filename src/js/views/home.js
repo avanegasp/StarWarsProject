@@ -13,7 +13,7 @@ export const Home = () => (
       <Link to="/planets" className="btn btn-dark me-5">
         Planets
       </Link>
-      <Link to="/vehicles" className="btn btn-dark">
+      <Link to="/starships" className="btn btn-dark">
         Starships
       </Link>
     </div>

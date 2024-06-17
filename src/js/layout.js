@@ -4,13 +4,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Characters from "./views/Characters.jsx";
 import Planets from "./views/Planets.jsx";
 import Starships from "./views/Starships.jsx";
-import CardDetailCharacter from "./views/CardDetailCharacter.jsx";
-import CardDetailPlanet from "./views/CardDetailPlanet.jsx";
+import CardDetailCharacter from "./component/CardDetailCharacter.jsx";
+import CardDetailPlanet from "./component/CardDetailPlanet.jsx";
 import { Home } from "./views/home";
 
 import Navbar from "./component/Nabvar.jsx";
 
 import injectContext from "./store/appContext";
+import CardDetailStarship from "./component/CardDetailStarship.jsx";
 
 const Layout = () => {
   const basename = process.env.BASENAME || "";
@@ -29,6 +30,10 @@ const Layout = () => {
             element={<CardDetailCharacter />}
           />
           <Route path="/cardDetailPlanets/:id" element={<CardDetailPlanet />} />
+          <Route
+            path="/cardDetailStarships/:id"
+            element={<CardDetailStarship />}
+          />
           {/* Ruta dinámica con :id */}
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>

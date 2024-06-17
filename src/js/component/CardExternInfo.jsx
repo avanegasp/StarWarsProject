@@ -19,10 +19,6 @@ const CardExternInfo = ({
   const { actions } = useContext(Context);
   const navigate = useNavigate();
 
-  // 1. Recibir un prop que identifique si es characters, planets....
-  // 2. Generar rutas para diferenciar entre planets, characters....
-  // 3. Hacer un template literal que pase el prop para tener una url dinamica
-
   async function handleLearnMoreClick() {
     await actions.getCharacter(id);
     navigate(`/cardDetail${urlName}/${id}`);

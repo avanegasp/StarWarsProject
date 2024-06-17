@@ -7,6 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       starships: [],
       character: {},
       planet: {},
+      starship: {},
     },
     actions: {
       getCharacter: async (id) => {
@@ -43,6 +44,24 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      getStarship: async (id) => {
+        const store = getStore();
+
+        try {
+          const response = await fetch(`${store.apiUrl}starships/${id}`);
+          if (!response.ok) {
+            throw new Error("No se puede traer las naves");
+          }
+          const data = await response.json();
+          console.log("Esto es desde starship sin S");
+          setStore({
+            starship: data,
+          });
+        } catch (e) {
+          console.error("Error fetching starship:", e);
+        }
+      },
+
       getCharacters: async () => {
         const store = getStore();
         try {
@@ -73,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      getVehicles: async () => {
+      getStarships: async () => {
         const store = getStore();
         try {
           const response = await fetch(`${store.apiUrl}starships/`);
@@ -81,7 +100,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer los vehículos");
           }
           const data = await response.json();
-          // console.log("esto es data results desde vehicles", data.results);
+          // console.log("esto es data results desde starships", data.results);
           setStore({ starships: data.results });
         } catch (e) {
           console.error("Error fetching starships:", e);
