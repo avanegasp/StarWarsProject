@@ -14,17 +14,18 @@ const InfoDetailCharacter = () => {
     //   }
   }, []);
 
-  console.log("after", id);
+  console.log("after", store.character);
 
   console.log("paramas id", store.character.id);
   return (
     <div className="container">
       {store.character ? (
-        <>
-          {console.log("ACAAA")}
-          <div className="row mt-5 mb-5">
-            <div className="card col-5">
-              <UrlImage id={id} urlName="characters" altName="CHARACTER" />
+        <div className="row mt-5 mb-5">
+          <div className="card col-12">
+            <div className="row">
+              <div className="col-5">
+                <UrlImage id={id} urlName="characters" altName="CHARACTER" />
+              </div>
               <div className="col-7">
                 <h3 className="text-center">
                   {store.character.name} {store.character.lastname}
@@ -42,31 +43,31 @@ const InfoDetailCharacter = () => {
                 </p>
               </div>
             </div>
+            <div className="row mt-3 mb-3">
+              <div className="col-2">
+                <p> Height: {store.character.height}</p>
+              </div>
+              <div className="col-2">
+                <p> Skin color: {store.character.skin_color}</p>
+              </div>
+              <div className="col-2">
+                <p> Birth year: {store.character.birth_year}</p>
+              </div>
+              <div className="col-2">
+                <p> Mass : {store.character.mass}</p>
+              </div>
+              <div className="col-2">
+                <p> Hair color: {store.character.hair_color}</p>
+              </div>
+              <div className="col-2">
+                <p> Eye color: {store.character.eye_color}</p>
+              </div>
+            </div>
           </div>
-        </>
+        </div>
       ) : (
         <p>Loading...</p>
       )}
-      {/* <div className="row">
-        <div className="col-2">
-          <p> Height: {mockData.height}</p>
-        </div>
-        <div className="col-2">
-          <p> Skin color: {mockData.skin_color}</p>
-        </div>
-        <div className="col-2">
-          <p> Birth year: {mockData.birth_year}</p>
-        </div>
-        <div className="col-2">
-          <p> Mass : {mockData.mass}</p>
-        </div>
-        <div className="col-2">
-          <p> Hair color: {mockData.hair_color}</p>
-        </div>
-        <div className="col-2">
-          <p> Eye color: {mockData.eye_color}</p>
-        </div>
-      </div> */}
     </div>
   );
 };
