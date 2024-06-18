@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 const CardExternInfo = ({
   name,
@@ -46,9 +48,9 @@ const CardExternInfo = ({
           <button onClick={handleLearnMoreClick} className="btn btn-dark me-1">
             Learn More
           </button>
-          <a href="#" className="btn btn-dark">
-            Fav
-          </a>
+          <button type="button" class="btn btn-dark">
+            <FontAwesomeIcon icon={faRocket} />
+          </button>
         </div>
       </div>
     </>

@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer los personajes");
           }
           const data = await response.json();
-          console.log("Esto es data desde character sin S", data);
+          // console.log("Esto es data desde character sin S", data);
           setStore({
             character: data,
           });
@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer los planetas");
           }
           const data = await response.json();
-          console.log("Esto es desde Planet sin S", data);
+          // console.log("Esto es desde Planet sin S", data);
           setStore({
             planet: data,
           });
@@ -53,7 +53,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             throw new Error("No se puede traer las naves");
           }
           const data = await response.json();
-          console.log("Esto es desde starship sin S");
+          // console.log("Esto es desde starship sin S");
           setStore({
             starship: data,
           });

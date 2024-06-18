@@ -17,13 +17,9 @@ const Navbar = () => {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav">
-            <Link
-              to="/"
-              className="nav-link active text-white"
-              aria-current="page"
-            >
-              Home
-            </Link>
+            <button type="button" className="btn btn-light me-5">
+              Favorites
+            </button>
           </div>
         </div>
       </div>

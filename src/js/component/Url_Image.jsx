@@ -7,13 +7,13 @@ const UrlImage = ({ id, urlName, altName }) => {
         "https://starwars-visualguide.com/assets/img/planets/12.jpg";
     } else if (urlName == "starships" && id == 2) {
       e.target.src =
-        "https://starwars-visualguide.com/assets/img/starships/12.jpg";
+        "https://starwars-visualguide.com/assets/img/starships/10.jpg";
     } else if (urlName == "starships" && id == 3) {
       e.target.src =
         "https://starwars-visualguide.com/assets/img/starships/15.jpg";
     } else if (urlName == "starships" && id == 17) {
       e.target.src =
-        "https://starwars-visualguide.com/assets/img/starships/9.jpg";
+        "https://starwars-visualguide.com/assets/img/starships/13.jpg";
     } else {
       e.target.src = "https://via.placeholder.com/150";
     }
