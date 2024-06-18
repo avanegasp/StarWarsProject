@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleRadiation } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const { store } = useContext(Context);
@@ -29,11 +31,16 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-menu">
               <li>
-                {store.favorites.map((favorite) => (
-                  <p key={favorite.id} className="dropdown-item">
-                    {favorite.name}
-                  </p>
-                ))}
+                <div className="">
+                  {store.favorites.map((favorite, index) => (
+                    <div className="d-flex" key={favorite.id}>
+                      <p className="dropdown-item">{favorite.name}</p>
+                      <span className="me-3">
+                        <FontAwesomeIcon icon={faCircleRadiation} />
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </li>
             </ul>
           </div>
