@@ -8,7 +8,23 @@ const InfoDetailPlanet = ({
   orbitalPeriod,
   diameter,
   climate,
+  gravity,
+  terrain,
+  surfaceWater,
+  population,
 }) => {
+  const descriptionFirstParagraph = `${name}, a moon in the Star Wars universe, 
+  boasts a rotation period of ${rotationPeriod} hours and an extensive orbital period of ${orbitalPeriod} days. 
+  With a diameter of ${diameter} kilometers, this celestial body features a temperate and ${climate} climate, 
+  offering a diverse range of environments. The gravity on ${name} is a comfortable ${gravity}, 
+  making it easy for its inhabitants to adapt.
+`;
+
+  const descriptionSecondParagraph = `
+  The terrain is dominated by dense ${terrain} and lush rainforests, 
+  with surface water covering ${surfaceWater} of the moon. Despite its vast wilderness, 
+  ${name} supports a small population of approximately ${population} habitants. `;
+
   return (
     <>
       <div className="row mt-5 mb-5">
@@ -19,12 +35,8 @@ const InfoDetailPlanet = ({
             </div>
             <div className="col-7 mt-5">
               <h3 className="text-center">{name}</h3>
-              <p className="mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum, voluptatem vitae esse dolorum nemo perspiciatis
-                repellat assumenda voluptas nobis illum nam doloremque
-                voluptatibus aut, expedita veniam accusamus! Autem, facere ut.
-              </p>
+              <p className="mt-4">{descriptionFirstParagraph}</p>
+              <p className="">{descriptionSecondParagraph}</p>
             </div>
           </div>
           <div className="row mt-3 mb-3 ms-5">

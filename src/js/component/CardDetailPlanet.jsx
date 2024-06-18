@@ -24,6 +24,10 @@ const CardDetailPlanet = () => {
           orbitalPeriod={store.planet.orbital_period}
           diameter={store.planet.diameter}
           climate={store.planet.climate}
+          gravity={store.planet.gravity}
+          terrain={store.planet.terrain}
+          surfaceWater={store.planet.surface_water}
+          population={store.planet.population}
         />
       ) : (
         <p>Loading...</p>

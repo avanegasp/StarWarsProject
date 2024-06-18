@@ -21,6 +21,8 @@ const MapGeneralPlanets = () => {
                 id={element.url.split("/")[5]}
                 population={element.population}
                 terrain={element.terrain}
+                surface={element.surface_water}
+                gravity={element.gravity}
                 urlName="planets"
                 altName="planets"
               />
