@@ -8,15 +8,9 @@ const CardDetailCharacter = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log("HEREEE", id);
-    //   if (actions && actions.getCharacter) {
     actions.getCharacter(id);
-    //   }
   }, []);
 
-  console.log("after", store.character);
-
-  console.log("paramas id", store.character.id);
   return (
     <div className="container">
       {store.character ? (

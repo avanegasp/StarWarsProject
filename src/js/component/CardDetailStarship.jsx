@@ -8,15 +8,9 @@ const CardDetailStarship = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log("Starship ID", id);
     actions.getStarship(id);
   }, []);
 
-  console.log(
-    "Esto es store.starship desde carddetailstarship",
-    store.starship
-  );
-  console.log("params id desde starship", store.starship.id);
   return (
     <div className="container">
       {store.starship ? (
