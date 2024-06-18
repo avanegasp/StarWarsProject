@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleRadiation } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
-  const { store } = useContext(Context);
+  const { store, actions } = useContext(Context);
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary m-0">
       <div className="container-fluid bg-dark">
@@ -27,15 +28,20 @@ const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favs
+              Favs {store.favorites.length}
             </button>
             <ul className="dropdown-menu">
               <li>
                 <div className="">
                   {store.favorites.map((favorite, index) => (
-                    <div className="d-flex" key={favorite.id}>
+                    <div className="d-flex" key={index}>
                       <p className="dropdown-item">{favorite.name}</p>
-                      <span className="me-3">
+                      <span
+                        className="me-3 mb-3"
+                        onClick={() => {
+                          actions.removeToFavorite(favorite.id);
+                        }}
+                      >
                         <FontAwesomeIcon icon={faCircleRadiation} />
                       </span>
                     </div>

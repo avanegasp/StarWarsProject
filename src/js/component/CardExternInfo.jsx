@@ -18,8 +18,6 @@ const CardExternInfo = ({
   model,
   manufacturer,
 }) => {
-  // const [favorites, setFavorites] = useState([]);
-
   const { actions, store } = useContext(Context);
   const navigate = useNavigate();
 
@@ -34,7 +32,7 @@ const CardExternInfo = ({
   //   console.log("esto es name.....", name);
   //   // navigate(`/cardDetail${urlName}/${id}`);
   // }
-  console.log("esto es favorite", store.favorites);
+  // console.log("esto es favorite", store.favorites);
 
   return (
     <>
