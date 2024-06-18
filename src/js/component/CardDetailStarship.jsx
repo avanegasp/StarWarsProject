@@ -29,6 +29,12 @@ const CardDetailStarship = () => {
           crew={store.starship.crew}
           manufacturer={store.starship.manufacturer}
           max_atmosphering_speed={store.starship.max_atmosphering_speed}
+          model={store.starship.model}
+          costInCredits={store.starship.cost_in_credits}
+          length={store.starship.length}
+          cargoCapacity={store.starship.cargo_capacity}
+          hyperdriveRating={store.starship.hyperdrive_rating}
+          mglt={store.starship.MGLT}
         />
       ) : (
         <p>Loading...</p>
