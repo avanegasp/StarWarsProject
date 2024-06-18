@@ -5,8 +5,11 @@ const MapGeneralStarships = ({ elements }) => {
   return (
     <>
       {elements.map((element, index) => (
-        <div className="d-inline-flex col-2 mt-5" key={index}>
-          <div className="card text-center" style={{ width: "18rem" }}>
+        <div
+          className="d-inline-flex col-3 mt-5 justify-content-center"
+          key={index}
+        >
+          <div className="card text-center" style={{ width: "15rem" }}>
             <Card
               name={element.name}
               id={element.url.split("/")[5]}

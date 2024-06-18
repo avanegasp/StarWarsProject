@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
@@ -18,13 +18,23 @@ const CardExternInfo = ({
   model,
   manufacturer,
 }) => {
-  const { actions } = useContext(Context);
+  // const [favorites, setFavorites] = useState([]);
+
+  const { actions, store } = useContext(Context);
   const navigate = useNavigate();
 
   async function handleLearnMoreClick() {
     await actions.getCharacter(id);
     navigate(`/cardDetail${urlName}/${id}`);
   }
+
+  // function addToFavorite(id, name) {
+  //   setFavorites([...favorites, { id: id, name: name }]);
+  //   console.log("ESTO ES ID.......", id);
+  //   console.log("esto es name.....", name);
+  //   // navigate(`/cardDetail${urlName}/${id}`);
+  // }
+  console.log("esto es favorite", store.favorites);
 
   return (
     <>
@@ -48,7 +58,11 @@ const CardExternInfo = ({
           <button onClick={handleLearnMoreClick} className="btn btn-dark me-1">
             Learn More
           </button>
-          <button type="button" class="btn btn-dark">
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={() => actions.addToFavorite(id, name)}
+          >
             <FontAwesomeIcon icon={faRocket} />
           </button>
         </div>

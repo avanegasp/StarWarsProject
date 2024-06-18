@@ -8,8 +8,15 @@ const getState = ({ getStore, getActions, setStore }) => {
       character: {},
       planet: {},
       starship: {},
+      favorites: [],
     },
     actions: {
+      addToFavorite: (id, name) => {
+        const store = getStore();
+        setStore({
+          favorites: [...store.favorites, { id, name }],
+        });
+      },
       getCharacter: async (id) => {
         const store = getStore();
         try {

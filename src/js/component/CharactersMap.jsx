@@ -1,13 +1,16 @@
 import React from "react";
-import Card from "./CardExternInfo.jsx";
+import CardExternInfo from "./CardExternInfo.jsx";
 
 const MapGeneralCharacters = ({ elements }) => {
   return (
     <>
       {elements.map((element, index) => (
-        <div className="d-inline-flex col-2 mt-5" key={index}>
-          <div className="card text-center" style={{ width: "18rem" }}>
-            <Card
+        <div
+          className="d-inline-flex col-3 mt-5 justify-content-center"
+          key={index}
+        >
+          <div className="card text-center" style={{ width: "15rem" }}>
+            <CardExternInfo
               name={element.name}
               gender={element.gender}
               hair_color={element.hair_color}

@@ -14,11 +14,12 @@ const InfoDetailCharacter = ({
 }) => {
   const descriptionFirstParagraph = `
   Standing at ${height} centimeters tall and weighing ${mass} kilograms, 
-  this legendary figure is known for their ${hairColor} hair, ${skinColor} skin, and piercing ${eyeColor} eyes. 
-  Born in ${birthYear}, their journey began on the desert planet of Tatooine, 
-  where he/she grew up unaware of their destiny. Starting as a humble farm child, 
-  he/she eventually became a central figure in the fight against the Galactic Empire.
+  this legendary figure is known for their ${hairColor} hair, ${skinColor} skin, and piercing ${eyeColor} eyes.
   `;
+
+  const descriptionSecondParagraph = `  Born in ${birthYear}, their journey began on the desert planet of Tatooine, 
+  where he/she grew up unaware of their destiny. Starting as a humble farm child, 
+  he/she eventually became a central figure in the fight against the Galactic Empire.`;
 
   return (
     <>
@@ -33,6 +34,7 @@ const InfoDetailCharacter = ({
                 {name} {lastName}
               </h3>
               <p className="mt-4">{descriptionFirstParagraph}</p>
+              <p className="mt-4">{descriptionSecondParagraph}</p>
             </div>
           </div>
           <div className="row mt-3 mb-3 ms-5">

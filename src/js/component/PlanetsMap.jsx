@@ -8,8 +8,11 @@ const MapGeneralPlanets = () => {
   return (
     <>
       {store.planets.map((element, index) => (
-        <div className="d-inline-flex col-2 mt-5" key={index}>
-          <div className="card text-center" style={{ width: "18rem" }}>
+        <div
+          className="d-inline-flex col-3 mt-5 justify-content-center gap-2"
+          key={index}
+        >
+          <div className="card text-center" style={{ width: "13rem" }}>
             {element.uid === 1 ? (
               <img
                 src="https://static.wikia.nocookie.net/starwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131019121937"
