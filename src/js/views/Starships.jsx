@@ -6,7 +6,7 @@ import MapGeneralStarships from "../component/StarshipsMap.jsx";
 const Starships = () => {
   const { store } = useContext(Context);
   return (
-    <div className="container">
+    <div className="d-flex flex-wrap container-fluid">
       <Title title="Starships" />
       <MapGeneralStarships elements={store.starships} />
     </div>

@@ -9,7 +9,7 @@ const MapGeneralCharacters = ({ elements }) => {
           className="d-inline-flex col-3 mt-5 justify-content-center"
           key={index}
         >
-          <div className="card text-center" style={{ width: "15rem" }}>
+          <div className="card text-center" style={{ width: "20rem" }}>
             <CardExternInfo
               name={element.name}
               gender={element.gender}

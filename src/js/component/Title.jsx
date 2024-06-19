@@ -1,9 +1,9 @@
 import React from "react";
 
-const Title = ({ title, nameBtn }) => {
+const Title = ({ title }) => {
   return (
     <>
-      <div className="text-center mt-5">
+      <div className="text-center">
         <h1>{title}</h1>
       </div>
     </>

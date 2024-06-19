@@ -1,4 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import "../../styles/CardExternInfo.css";
 import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
@@ -18,7 +19,7 @@ const CardExternInfo = ({
   model,
   manufacturer,
 }) => {
-  const { actions, store } = useContext(Context);
+  const { actions } = useContext(Context);
   const navigate = useNavigate();
 
   async function handleLearnMoreClick() {
@@ -26,19 +27,11 @@ const CardExternInfo = ({
     navigate(`/cardDetail${urlName}/${id}`);
   }
 
-  // function addToFavorite(id, name) {
-  //   setFavorites([...favorites, { id: id, name: name }]);
-  //   console.log("ESTO ES ID.......", id);
-  //   console.log("esto es name.....", name);
-  //   // navigate(`/cardDetail${urlName}/${id}`);
-  // }
-  // console.log("esto es favorite", store.favorites);
-
   return (
     <>
       <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
       <div className="card-body">
-        <h5 className="card-title">{name}</h5>
+        <p className="characterName card-title">{name}</p>
         {gender ? <p className="card-text">Gender: {gender}</p> : null}
         {hair_color ? (
           <p className="card-text">Hair color: {hair_color}</p>
