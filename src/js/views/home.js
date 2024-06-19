@@ -10,18 +10,13 @@ export const Home = () => (
       style={{
         backgroundImage: `url(${starWarsImage})`,
       }}
-      //   backgroundSize: `cover`,
-      //   backgroundPosition: `center`,
-      //   height: `100%`,
-      //   width: `100%`,
     >
-      {/* <h1 className="text-center">May the Force be with you</h1> */}
       <div className="d-flex justify-content-center align-items-center min-vh-100">
         <div className="wordsHome">
-          <Link to="/characters" className="linkHome btn btn-ligth me-5">
+          <Link to="/characters" className="linkHome btn btn-ligth">
             Characters
           </Link>
-          <Link to="/planets" className="linkHome btn btn-ligth me-5">
+          <Link to="/planets" className="linkHome btn btn-ligth">
             Planets
           </Link>
           <Link to="/starships" className="linkHome btn btn-ligth">

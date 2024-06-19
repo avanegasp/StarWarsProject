@@ -1,0 +1,27 @@
+.wordNavbar {
+  font-family: "Star Wars", sans-serif;
+  font-size: 2rem;
+  &:hover {
+    color: #ff0000;
+    background-color: rgba(128, 0, 128, -0.5);
+    box-shadow: 1px -1px 20px 10px #c9ec57;
+  }
+}
+
+.favNavbar {
+  border: 1px solid white;
+  padding: 10px 4rem;
+  font-family: "Star Wars", sans-serif;
+  color: white;
+
+  &:hover {
+    color: #ff0000;
+    background-color: rgba(128, 0, 128, -0.5);
+    box-shadow: -11px 8px 20px 4px #00ffcc;
+  }
+}
+
+.favNavbar {
+  font-family: "Star Wars", sans-serif;
+  font-size: 20px;
+}

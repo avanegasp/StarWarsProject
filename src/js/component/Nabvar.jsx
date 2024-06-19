@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "../../styles/navbar.css";
 import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +13,7 @@ const Navbar = () => {
       <div className="container-fluid bg-dark">
         <Link
           to="/"
-          className="nav-link active fs-1 text-white"
+          className="wordNavbar nav-link active text-white"
           aria-current="page"
         >
           StarWars
@@ -23,12 +24,13 @@ const Navbar = () => {
         >
           <div className="btn-group dropstart">
             <button
-              className="btn btn-secondary me-5 rounded-pill"
+              className="favNavbar btn btn-ligth rounded-pill"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favs {store.favorites.length}
+              Favs{" "}
+              <span className="favNumNavbar">{store.favorites.length}</span>
             </button>
             <ul className="dropdown-menu">
               <li>
