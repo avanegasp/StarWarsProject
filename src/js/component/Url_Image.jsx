@@ -18,7 +18,6 @@ const UrlImage = ({ id, urlName, altName }) => {
       e.target.src = "https://via.placeholder.com/150";
     }
   };
-  // console.log("ESTO ES ID IMAGE", id);
   return (
     <>
       <img

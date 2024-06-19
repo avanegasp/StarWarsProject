@@ -12,6 +12,7 @@ import Navbar from "./component/Nabvar.jsx";
 
 import injectContext from "./store/appContext";
 import CardDetailStarship from "./component/CardDetailStarship.jsx";
+import "../styles/layout.css";
 
 const Layout = () => {
   const basename = process.env.BASENAME || "";
@@ -34,7 +35,6 @@ const Layout = () => {
             path="/cardDetailStarships/:id"
             element={<CardDetailStarship />}
           />
-          {/* Ruta dinámica con :id */}
           <Route path="*" element={<h1>Not found!</h1>} />
         </Routes>
       </BrowserRouter>

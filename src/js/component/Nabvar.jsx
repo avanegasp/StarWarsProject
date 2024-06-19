@@ -23,7 +23,7 @@ const Navbar = () => {
         >
           <div className="btn-group dropstart">
             <button
-              className="btn btn-secondary"
+              className="btn btn-secondary me-5 rounded-pill"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"

@@ -1,24 +1,34 @@
 import React from "react";
-import starWarsImage from "../../img/inicioStarwars.jpg";
-import "../../styles/home.css";
 import { Link } from "react-router-dom";
+import starWarsImage from "../../img/the-rise.jpg";
+import "../../styles/home.css";
 
 export const Home = () => (
-  <div className="text-center mt-2">
-    <h1 className="text-center mt-2 ">May the Force be with you</h1>
-    <div className="mt-3">
-      <Link to="/characters" className="btn btn-dark me-5">
-        Characters
-      </Link>
-      <Link to="/planets" className="btn btn-dark me-5">
-        Planets
-      </Link>
-      <Link to="/starships" className="btn btn-dark">
-        Starships
-      </Link>
+  <div className="home text-center">
+    <div
+      className="backgroundHome"
+      style={{
+        backgroundImage: `url(${starWarsImage})`,
+      }}
+      //   backgroundSize: `cover`,
+      //   backgroundPosition: `center`,
+      //   height: `100%`,
+      //   width: `100%`,
+    >
+      {/* <h1 className="text-center">May the Force be with you</h1> */}
+      <div className="d-flex justify-content-center align-items-center min-vh-100">
+        <div className="wordsHome">
+          <Link to="/characters" className="linkHome btn btn-ligth me-5">
+            Characters
+          </Link>
+          <Link to="/planets" className="linkHome btn btn-ligth me-5">
+            Planets
+          </Link>
+          <Link to="/starships" className="linkHome btn btn-ligth">
+            Starships
+          </Link>
+        </div>
+      </div>
     </div>
-    <p>
-      <img className="mt-3 " src={starWarsImage} />
-    </p>
   </div>
 );

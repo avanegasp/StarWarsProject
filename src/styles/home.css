@@ -1,0 +1,28 @@
+.home {
+  /* background-color: #492877; */
+  height: 100vh;
+}
+.backgroundHome {
+  /* background-image: url(../img/the-rise.jpg); */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.linkHome {
+  border: 1px solid white;
+  color: white;
+  padding: 1rem 7rem 1rem;
+
+  &:hover {
+    color: #ff0000;
+    background-color: rgba(128, 0, 128, -0.5);
+    box-shadow: 1px 0px 20px 19px #00ffcc;
+  }
+}
+
+.wordsHome {
+  font-family: "Star Wars", sans-serif;
+}
