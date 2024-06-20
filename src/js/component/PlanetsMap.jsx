@@ -1,39 +1,140 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext.js";
-import Card from "./CardExternInfo.jsx";
+import CardExternInfo from "./CardExternInfo.jsx";
 
 const MapGeneralPlanets = () => {
   const { store } = useContext(Context);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === store.planets.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? store.planets.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [store.planets.length]);
+
+  const handleSlideTo = (index) => {
+    setActiveIndex(index);
+  };
+
+  if (!store.planets || store.planets.length === 0) {
+    return <p>No hay planetas disponibles.</p>;
+  }
+
+  const activePlanet = store.planets[activeIndex] || {};
 
   return (
-    <>
-      {store.planets.map((element, index) => (
-        <div
-          className="d-inline-flex col-3 mt-5 justify-content-center gap-2"
-          key={index}
-        >
-          <div className="card text-center" style={{ width: "13rem" }}>
-            {element.uid === 1 ? (
-              <img
-                src="https://static.wikia.nocookie.net/starwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131019121937"
-                alt="Tatooine"
-              />
-            ) : (
-              <Card
-                name={element.name}
-                id={element.url.split("/")[5]}
-                population={element.population}
-                terrain={element.terrain}
-                surface={element.surface_water}
-                gravity={element.gravity}
-                urlName="planets"
-                altName="planets"
-              />
-            )}
+    <div className="container-fluid">
+      <div
+        className="row justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div className="col-6">
+          <div
+            id="carouselExampleCaptions"
+            className="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="false"
+          >
+            <div className="carousel-inner">
+              {store.planets.map((planet, index) => (
+                <div
+                  className={`carousel-item ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                  key={index}
+                >
+                  <div className="d-flex justify-content-center">
+                    <div
+                      className="card text-center"
+                      style={{ width: "18rem" }}
+                    >
+                      <CardExternInfo
+                        id={planet.url.split("/")[5]}
+                        urlName="planets"
+                        altName="Planets"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+              onClick={prevSlide}
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Anterior</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+              onClick={nextSlide}
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Siguiente</span>
+            </button>
           </div>
         </div>
-      ))}
-    </>
+
+        <div className="col-6">
+          <div
+            className="card text-white"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.0)" }}
+          >
+            <div className="card-body">
+              <h5>{activePlanet.name}</h5>
+              {activePlanet.population && (
+                <p>
+                  <strong>Población:</strong> {activePlanet.population}
+                </p>
+              )}
+              {activePlanet.terrain && (
+                <p>
+                  <strong>Terreno:</strong> {activePlanet.terrain}
+                </p>
+              )}
+              {activePlanet.surface_water && (
+                <p>
+                  <strong>Superficie de agua:</strong>{" "}
+                  {activePlanet.surface_water}
+                </p>
+              )}
+              {activePlanet.gravity && (
+                <p>
+                  <strong>Gravedad:</strong> {activePlanet.gravity}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

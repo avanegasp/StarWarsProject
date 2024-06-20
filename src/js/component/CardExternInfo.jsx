@@ -29,55 +29,64 @@ const CardExternInfo = ({
 
   return (
     <>
-      <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
-      <div className="card-body">
-        <p className="characterName card-title">{name}</p>
-        {gender ? (
-          <p className="card-text">
-            <strong>Gender:</strong> {gender}
-          </p>
-        ) : null}
-        {hair_color ? (
-          <p className="card-text">
-            <strong>Hair color:</strong> {hair_color}
-          </p>
-        ) : null}
-        {eye_color ? (
-          <p className="card-text">
-            <strong>Eye color:</strong> {eye_color}
-          </p>
-        ) : null}
-        {population ? (
-          <p className="card-text">
-            <strong>Population:</strong> {population}
-          </p>
-        ) : null}
-        {terrain ? (
-          <p className="card-text">
-            <strong>Terrain:</strong> {terrain}
-          </p>
-        ) : null}
-        {model ? (
-          <p className="card-text">
-            <strong>Model:</strong> {model}
-          </p>
-        ) : null}
-        {manufacturer ? (
-          <p className="card-text">
-            <strong>Manufacturer:</strong> {manufacturer}
-          </p>
-        ) : null}
-        <div>
-          <button onClick={handleLearnMoreClick} className="btn btn-dark me-1">
-            Learn More
-          </button>
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => actions.addToFavorite(id, name)}
-          >
-            <FontAwesomeIcon icon={faRocket} />
-          </button>
+      <div>
+        <div className="carousel-item active">
+          <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
+          <div className="carousel-caption d-none d-md-block">
+            <h5>{name}</h5>
+            <div className="card-body">
+              {gender && (
+                <p className="card-text">
+                  <strong>Género:</strong> {gender}
+                </p>
+              )}
+              {hair_color && (
+                <p className="card-text">
+                  <strong>Color de cabello:</strong> {hair_color}
+                </p>
+              )}
+              {eye_color && (
+                <p className="card-text">
+                  <strong>Color de ojos:</strong> {eye_color}
+                </p>
+              )}
+              {population && (
+                <p className="card-text">
+                  <strong>Población:</strong> {population}
+                </p>
+              )}
+              {terrain && (
+                <p className="card-text">
+                  <strong>Terreno:</strong> {terrain}
+                </p>
+              )}
+              {model && (
+                <p className="card-text">
+                  <strong>Modelo:</strong> {model}
+                </p>
+              )}
+              {manufacturer && (
+                <p className="card-text">
+                  <strong>Fabricante:</strong> {manufacturer}
+                </p>
+              )}
+            </div>
+          </div>
+          <div>
+            <button
+              onClick={handleLearnMoreClick}
+              className="btn btn-secondary me-1"
+            >
+              Aprender Más
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => actions.addToFavorite(id, name)}
+            >
+              <FontAwesomeIcon icon={faRocket} />
+            </button>
+          </div>
         </div>
       </div>
     </>
