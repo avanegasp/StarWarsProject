@@ -1,5 +1,7 @@
 import React from "react";
 import UrlImage from "../component/Url_Image.jsx";
+import infoDetailStarshipImage from "../../img/tunel.jpg";
+import "../../styles/infoDetailStarship.css";
 
 const InfoDetailPlanet = ({
   id,
@@ -34,36 +36,43 @@ const InfoDetailPlanet = ({
 
   return (
     <>
-      <div className="row mt-5 mb-5">
-        <div className="card col-12">
-          <div className="row">
-            <div className="col-5 mt-5">
-              <UrlImage id={id} urlName="starships" altName="Starship" />
+      <div
+        className="backgroundInfoDetailStarship"
+        style={{
+          backgroundImage: `url(${infoDetailStarshipImage})`,
+        }}
+      >
+        <div className="row align-items-center min-vh-100">
+          <div className="card col-12">
+            <div className="row d-flex justify-content-center">
+              <div className="picture col-5 mt-2">
+                <UrlImage id={id} urlName="starships" altName="Starship" />
+              </div>
+              <div className="col-7 mt-3">
+                <h3 className="text-center">{name}</h3>
+                <p className="mt-4">{descriptionFirstParagraph}</p>
+                <p className="mt-4">{descriptionSecondParagraph}</p>
+              </div>
             </div>
-            <div className="col-7 mt-3">
-              <h3 className="text-center">{name}</h3>
-              <p className="mt-4">{descriptionFirstParagraph}</p>
-              <p className="mt-4">{descriptionSecondParagraph}</p>
-            </div>
-          </div>
-          <div className="row mt-3 mb-3 ms-2">
-            <div className="col-2">
-              <p> Starship Class:{starshipClass}</p>
-            </div>
-            <div className="col-2">
-              <p> Passengers: {passengers}</p>
-            </div>
-            <div className="col-2">
-              <p>Max Atmosphering Speed: {max_atmosphering_speed}</p>
-            </div>
-            <div className="col-2">
-              <p> Consumables: {consumables}</p>
-            </div>
-            <div className="col-2">
-              <p>Manufacturer: {manufacturer}</p>
-            </div>
-            <div className="col-2">
-              <p>Crew: {crew}</p>
+            <div className="row mt-3 mb-3 ms-2">
+              <div className="col-2">
+                <p> Starship Class:{starshipClass}</p>
+              </div>
+              <div className="col-2">
+                <p> Passengers: {passengers}</p>
+              </div>
+              <div className="col-2">
+                <p>Max Atmosphering Speed: {max_atmosphering_speed}</p>
+              </div>
+              <div className="col-2">
+                <p> Consumables: {consumables}</p>
+              </div>
+              <div className="col-2">
+                <p>Manufacturer: {manufacturer}</p>
+              </div>
+              <div className="col-2">
+                <p>Crew: {crew}</p>
+              </div>
             </div>
           </div>
         </div>
