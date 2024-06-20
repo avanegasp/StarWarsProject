@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "../../styles/navbar.css";
 import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
+import Search from "./Search.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleRadiation } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,6 +19,9 @@ const Navbar = () => {
         >
           StarWars
         </Link>
+        <div className="justify-content-center">
+          <Search />
+        </div>
         <div
           className="collapse navbar-collapse justify-content-end fs-5 "
           id="navbarNavAltMarkup"
@@ -34,7 +38,7 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <div className="">
+                <div className="bg-dark">
                   {store.favorites.map((favorite, index) => (
                     <div className="d-flex" key={index}>
                       <p className="dropdown-item">{favorite.name}</p>
