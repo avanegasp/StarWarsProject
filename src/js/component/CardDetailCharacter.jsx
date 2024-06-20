@@ -12,7 +12,7 @@ const CardDetailCharacter = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       {store.character ? (
         <InfoDetailCharacter
           id={id}

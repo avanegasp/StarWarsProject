@@ -1,6 +1,7 @@
 import React from "react";
 import UrlImage from "../component/Url_Image.jsx";
-import "../../styles/infoDetail.css";
+import infoDetailPlanetImage from "../../img/tunel.jpg";
+import "../../styles/infoDetailPlanet.css";
 
 const InfoDetailPlanet = ({
   id,
@@ -28,30 +29,37 @@ const InfoDetailPlanet = ({
 
   return (
     <>
-      <div className="row mt-5 mb-5">
-        <div className="card col-12">
-          <div className="row d-flex justify-content-center">
-            <div className="picture col-5 mt-2">
-              <UrlImage id={id} urlName="planets" altName="Planet" />
+      <div
+        className="backgroundInfoDetailPlanet"
+        style={{
+          backgroundImage: `url(${infoDetailPlanetImage})`,
+        }}
+      >
+        <div className="row align-items-center min-vh-100">
+          <div className="card col-12">
+            <div className="row d-flex justify-content-center">
+              <div className="picture col-5 mt-2">
+                <UrlImage id={id} urlName="planets" altName="Planet" />
+              </div>
+              <div className="col-7 mt-5">
+                <h3 className="text-center">{name}</h3>
+                <p className="mt-4">{descriptionFirstParagraph}</p>
+                <p className="">{descriptionSecondParagraph}</p>
+              </div>
             </div>
-            <div className="col-7 mt-5">
-              <h3 className="text-center">{name}</h3>
-              <p className="mt-4">{descriptionFirstParagraph}</p>
-              <p className="">{descriptionSecondParagraph}</p>
-            </div>
-          </div>
-          <div className="row mt-3 mb-3 ms-5">
-            <div className="col-3">
-              <p>Rotation Period:{rotationPeriod}</p>
-            </div>
-            <div className="col-3">
-              <p> Orbital Period: {orbitalPeriod}</p>
-            </div>
-            <div className="col-3">
-              <p> Diameter: {diameter}</p>
-            </div>
-            <div className="col-3">
-              <p>Climate: {climate}</p>
+            <div className="row mt-3 mb-3 ms-5">
+              <div className="col-3">
+                <p>Rotation Period:{rotationPeriod}</p>
+              </div>
+              <div className="col-3">
+                <p> Orbital Period: {orbitalPeriod}</p>
+              </div>
+              <div className="col-3">
+                <p> Diameter: {diameter}</p>
+              </div>
+              <div className="col-3">
+                <p>Climate: {climate}</p>
+              </div>
             </div>
           </div>
         </div>

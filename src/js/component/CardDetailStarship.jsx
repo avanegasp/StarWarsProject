@@ -12,7 +12,7 @@ const CardDetailStarship = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       {store.starship ? (
         <InfoDetailStarship
           id={id}

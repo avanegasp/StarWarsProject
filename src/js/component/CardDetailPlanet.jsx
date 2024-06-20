@@ -12,7 +12,7 @@ const CardDetailPlanet = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       {store.planet ? (
         <InfoDetailPlanet
           id={id}
