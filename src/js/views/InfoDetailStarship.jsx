@@ -49,29 +49,51 @@ const InfoDetailPlanet = ({
                 <UrlImage id={id} urlName="starships" altName="Starship" />
               </div>
               <div className="col-7 mt-3">
-                <h3 className="text-center">{name}</h3>
-                <p className="mt-4">{descriptionFirstParagraph}</p>
-                <p className="mt-4">{descriptionSecondParagraph}</p>
+                <h3 className="infoDetailStarshipName text-center">{name}</h3>
+                <p className="descriptionFirstStarship mt-4">
+                  {descriptionFirstParagraph}
+                </p>
+                <p className="descriptionSecondStarship mt-4">
+                  {descriptionSecondParagraph}
+                </p>
               </div>
             </div>
             <div className="row mt-3 mb-3 ms-2">
               <div className="col-2">
-                <p> Starship Class:{starshipClass}</p>
+                <p>
+                  {" "}
+                  <strong>Starship Class:</strong>
+                  {starshipClass}
+                </p>
               </div>
               <div className="col-2">
-                <p> Passengers: {passengers}</p>
+                <p>
+                  {" "}
+                  <strong>Passengers:</strong> {passengers}
+                </p>
               </div>
               <div className="col-2">
-                <p>Max Atmosphering Speed: {max_atmosphering_speed}</p>
+                <p>
+                  <strong>Max Atmosphering Speed:</strong>{" "}
+                  {max_atmosphering_speed}
+                </p>
               </div>
               <div className="col-2">
-                <p> Consumables: {consumables}</p>
+                <p>
+                  {" "}
+                  <strong>Consumables:</strong> {consumables}
+                </p>
               </div>
               <div className="col-2">
-                <p>Manufacturer: {manufacturer}</p>
+                <p>
+                  <strong>Manufacturer:</strong> {manufacturer}
+                </p>
               </div>
               <div className="col-2">
-                <p>Crew: {crew}</p>
+                <p>
+                  <strong>Crew:</strong>
+                  {crew}
+                </p>
               </div>
             </div>
           </div>

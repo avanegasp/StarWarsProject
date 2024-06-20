@@ -32,18 +32,40 @@ const CardExternInfo = ({
       <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
       <div className="card-body">
         <p className="characterName card-title">{name}</p>
-        {gender ? <p className="card-text">Gender: {gender}</p> : null}
+        {gender ? (
+          <p className="card-text">
+            <strong>Gender:</strong> {gender}
+          </p>
+        ) : null}
         {hair_color ? (
-          <p className="card-text">Hair color: {hair_color}</p>
+          <p className="card-text">
+            <strong>Hair color:</strong> {hair_color}
+          </p>
         ) : null}
-        {eye_color ? <p className="card-text">Eye color: {eye_color}</p> : null}
+        {eye_color ? (
+          <p className="card-text">
+            <strong>Eye color:</strong> {eye_color}
+          </p>
+        ) : null}
         {population ? (
-          <p className="card-text">Population: {population}</p>
+          <p className="card-text">
+            <strong>Population:</strong> {population}
+          </p>
         ) : null}
-        {terrain ? <p className="card-text"> Terrain: {terrain}</p> : null}
-        {model ? <p className="card-text">Model: {model}</p> : null}
+        {terrain ? (
+          <p className="card-text">
+            <strong>Terrain:</strong> {terrain}
+          </p>
+        ) : null}
+        {model ? (
+          <p className="card-text">
+            <strong>Model:</strong> {model}
+          </p>
+        ) : null}
         {manufacturer ? (
-          <p className="card-text">Manufacturer: {manufacturer}</p>
+          <p className="card-text">
+            <strong>Manufacturer:</strong> {manufacturer}
+          </p>
         ) : null}
         <div>
           <button onClick={handleLearnMoreClick} className="btn btn-dark me-1">

@@ -9,3 +9,13 @@
   height: 100%;
   width: 100%;
 }
+
+.infoDetailPlanetName {
+  font-family: "Heavy Metal Blight", sans-serif;
+}
+
+.descriptionFirstPlanet,
+.descriptionSecondPlanet,
+strong {
+  font-family: "Sahara", sans-serif;
+}

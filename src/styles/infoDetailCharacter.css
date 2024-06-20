@@ -9,3 +9,12 @@
   height: 100%;
   width: 100%;
 }
+
+.infoDetailCharacterNameLastname {
+  font-family: "Heavy Metal Blight", sans-serif;
+}
+
+.descriptionFirstCharacter,
+.descriptionSecondCharacter {
+  font-family: "Sahara", sans-serif;
+}

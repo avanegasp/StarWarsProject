@@ -9,3 +9,12 @@
   height: 100%;
   width: 100%;
 }
+
+.infoDetailStarshipName {
+  font-family: "Heavy Metal Blight", sans-serif;
+}
+
+.descriptionFirstStarship,
+.descriptionSecondStarship {
+  font-family: "Sahara", sans-serif;
+}

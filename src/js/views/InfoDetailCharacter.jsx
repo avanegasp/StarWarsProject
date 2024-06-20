@@ -38,31 +38,53 @@ const InfoDetailCharacter = ({
                 <UrlImage id={id} urlName="characters" altName="Character" />
               </div>
               <div className="col-7 mt-5">
-                <h3 className="text-center">
+                <h3 className="infoDetailCharacterNameLastname text-center">
                   {name} {lastName}
                 </h3>
-                <p className="mt-4">{descriptionFirstParagraph}</p>
-                <p className="mt-4">{descriptionSecondParagraph}</p>
+                <p className="mt-4 descriptionFirstCharacter">
+                  {descriptionFirstParagraph}
+                </p>
+                <p className="mt-4 descriptionSecondCharacter ">
+                  {descriptionSecondParagraph}
+                </p>
               </div>
             </div>
             <div className="row mt-3 mb-3 ms-5">
               <div className="col-2">
-                <p> Height: {height}</p>
+                <p>
+                  {" "}
+                  <strong>Height:</strong> {height}
+                </p>
               </div>
               <div className="col-2">
-                <p> Skin color: {skinColor}</p>
+                <p>
+                  {" "}
+                  <strong>Skin color:</strong> {skinColor}
+                </p>
               </div>
               <div className="col-2">
-                <p> Birth year: {birthYear}</p>
+                <p>
+                  {" "}
+                  <strong>Birth year:</strong> {birthYear}
+                </p>
               </div>
               <div className="col-2">
-                <p> Mass : {mass}</p>
+                <p>
+                  {" "}
+                  <strong>Mass:</strong> {mass}
+                </p>
               </div>
               <div className="col-2">
-                <p> Hair color: {hairColor}</p>
+                <p>
+                  {" "}
+                  <strong>Hair color:</strong> {hairColor}
+                </p>
               </div>
               <div className="col-2">
-                <p> Eye color: {eyeColor}</p>
+                <p>
+                  {" "}
+                  <strong>Eye color:</strong> {eyeColor}
+                </p>
               </div>
             </div>
           </div>

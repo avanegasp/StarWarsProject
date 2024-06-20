@@ -42,23 +42,37 @@ const InfoDetailPlanet = ({
                 <UrlImage id={id} urlName="planets" altName="Planet" />
               </div>
               <div className="col-7 mt-5">
-                <h3 className="text-center">{name}</h3>
-                <p className="mt-4">{descriptionFirstParagraph}</p>
-                <p className="">{descriptionSecondParagraph}</p>
+                <h3 className="infoDetailPlanetName text-center">{name}</h3>
+                <p className="descriptionFirstPlanet mt-4">
+                  {descriptionFirstParagraph}
+                </p>
+                <p className="descriptionSecondPlanet mt-4">
+                  {descriptionSecondParagraph}
+                </p>
               </div>
             </div>
             <div className="row mt-3 mb-3 ms-5">
               <div className="col-3">
-                <p>Rotation Period:{rotationPeriod}</p>
+                <p>
+                  <strong>Rotation Period:</strong> {rotationPeriod}
+                </p>
               </div>
               <div className="col-3">
-                <p> Orbital Period: {orbitalPeriod}</p>
+                <p>
+                  {" "}
+                  <strong>Orbital Period:</strong> {orbitalPeriod}
+                </p>
               </div>
               <div className="col-3">
-                <p> Diameter: {diameter}</p>
+                <p>
+                  {" "}
+                  <strong>Diameter:</strong> {diameter}
+                </p>
               </div>
               <div className="col-3">
-                <p>Climate: {climate}</p>
+                <p>
+                  <strong>Climate:</strong> {climate}
+                </p>
               </div>
             </div>
           </div>
