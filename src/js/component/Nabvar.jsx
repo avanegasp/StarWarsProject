@@ -19,7 +19,7 @@ const Navbar = () => {
         >
           StarWars
         </Link>
-        <div className="justify-content-center">
+        <div className="collapse navbar-collapse mt-3">
           <Search />
         </div>
         <div
