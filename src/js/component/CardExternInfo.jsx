@@ -37,37 +37,37 @@ const CardExternInfo = ({
             <div className="card-body">
               {gender && (
                 <p className="card-text">
-                  <strong>Género:</strong> {gender}
+                  <strong>Gender:</strong> {gender}
                 </p>
               )}
               {hair_color && (
                 <p className="card-text">
-                  <strong>Color de cabello:</strong> {hair_color}
+                  <strong>Hair Color:</strong> {hair_color}
                 </p>
               )}
               {eye_color && (
                 <p className="card-text">
-                  <strong>Color de ojos:</strong> {eye_color}
+                  <strong>Eyes color:</strong> {eye_color}
                 </p>
               )}
               {population && (
                 <p className="card-text">
-                  <strong>Población:</strong> {population}
+                  <strong>Population:</strong> {population}
                 </p>
               )}
               {terrain && (
                 <p className="card-text">
-                  <strong>Terreno:</strong> {terrain}
+                  <strong>Terrain:</strong> {terrain}
                 </p>
               )}
               {model && (
                 <p className="card-text">
-                  <strong>Modelo:</strong> {model}
+                  <strong>Model:</strong> {model}
                 </p>
               )}
               {manufacturer && (
                 <p className="card-text">
-                  <strong>Fabricante:</strong> {manufacturer}
+                  <strong>Manufacturer:</strong> {manufacturer}
                 </p>
               )}
             </div>
@@ -77,7 +77,7 @@ const CardExternInfo = ({
               onClick={handleLearnMoreClick}
               className="btn btn-secondary me-1"
             >
-              Aprender Más
+              Details
             </button>
             <button
               type="button"

@@ -60,7 +60,7 @@ const MapGeneralPlanets = () => {
                   <div className="d-flex justify-content-center">
                     <div
                       className="card text-center"
-                      style={{ width: "18rem" }}
+                      style={{ width: "20rem" }}
                     >
                       <CardExternInfo
                         id={planet.url.split("/")[5]}
@@ -111,23 +111,22 @@ const MapGeneralPlanets = () => {
               <h5>{activePlanet.name}</h5>
               {activePlanet.population && (
                 <p>
-                  <strong>Población:</strong> {activePlanet.population}
+                  <strong>Population:</strong> {activePlanet.population}
                 </p>
               )}
               {activePlanet.terrain && (
                 <p>
-                  <strong>Terreno:</strong> {activePlanet.terrain}
+                  <strong>Terrain:</strong> {activePlanet.terrain}
                 </p>
               )}
               {activePlanet.surface_water && (
                 <p>
-                  <strong>Superficie de agua:</strong>{" "}
-                  {activePlanet.surface_water}
+                  <strong>Surface water:</strong> {activePlanet.surface_water}
                 </p>
               )}
               {activePlanet.gravity && (
                 <p>
-                  <strong>Gravedad:</strong> {activePlanet.gravity}
+                  <strong>Gravity:</strong> {activePlanet.gravity}
                 </p>
               )}
             </div>

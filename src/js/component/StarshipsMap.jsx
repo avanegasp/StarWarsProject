@@ -60,7 +60,7 @@ const MapGeneralStarships = () => {
                   <div className="d-flex justify-content-center">
                     <div
                       className="card text-center"
-                      style={{ width: "18rem" }}
+                      style={{ width: "20rem" }}
                     >
                       <CardExternInfo
                         id={starship.url.split("/")[5]}
@@ -111,12 +111,12 @@ const MapGeneralStarships = () => {
               <h5>{activeStarship.name}</h5>
               {activeStarship.model && (
                 <p>
-                  <strong>Modelo:</strong> {activeStarship.model}
+                  <strong>Model:</strong> {activeStarship.model}
                 </p>
               )}
               {activeStarship.manufacturer && (
                 <p>
-                  <strong>Fabricante:</strong> {activeStarship.manufacturer}
+                  <strong>Manufacturer:</strong> {activeStarship.manufacturer}
                 </p>
               )}
             </div>

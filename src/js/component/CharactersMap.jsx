@@ -58,7 +58,7 @@ const MapGeneralCharacters = ({ elements }) => {
                   <div className="d-flex justify-content-center">
                     <div
                       className="card text-center"
-                      style={{ width: "18rem" }}
+                      style={{ width: "20rem" }}
                     >
                       <CardExternInfo
                         id={element.url.split("/")[5]}
@@ -109,17 +109,17 @@ const MapGeneralCharacters = ({ elements }) => {
               <h5>{activeElement.name}</h5>
               {activeElement.gender && (
                 <p>
-                  <strong>Género:</strong> {activeElement.gender}
+                  <strong>Gender:</strong> {activeElement.gender}
                 </p>
               )}
               {activeElement.hair_color && (
                 <p>
-                  <strong>Color de cabello:</strong> {activeElement.hair_color}
+                  <strong>Hair Color:</strong> {activeElement.hair_color}
                 </p>
               )}
               {activeElement.eye_color && (
                 <p>
-                  <strong>Color de ojos:</strong> {activeElement.eye_color}
+                  <strong>Eyes Color:</strong> {activeElement.eye_color}
                 </p>
               )}
             </div>
