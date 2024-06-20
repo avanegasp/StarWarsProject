@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../../styles/characters.css";
-import characterBackground from "../../img/rogueone.jpg";
+import characterBackground from "../../img/blue.jpg";
 import { Context } from "../store/appContext.js";
 import MapGeneralCharacters from "../component/CharactersMap.jsx";
 import Title from "../component/Title.jsx";
