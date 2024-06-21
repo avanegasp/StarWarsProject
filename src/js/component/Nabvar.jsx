@@ -38,10 +38,13 @@ const Navbar = () => {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <div className="bg-dark">
+                <div className="bg-white">
                   {store.favorites.map((favorite, index) => (
                     <div className="d-flex" key={index}>
-                      <p className="dropdown-item">{favorite.name}</p>
+                      {console.log("favorite name", store.favorite)}
+                      <p className="dropdown-item text-black">
+                        {favorite.name}
+                      </p>
                       <span
                         className="me-3 mb-3"
                         onClick={() => {

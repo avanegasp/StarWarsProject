@@ -63,6 +63,7 @@ const MapGeneralPlanets = () => {
                       style={{ width: "20rem" }}
                     >
                       <CardExternInfo
+                        name={planet.name}
                         id={planet.url.split("/")[5]}
                         urlName="planets"
                         altName="Planets"
@@ -108,7 +109,7 @@ const MapGeneralPlanets = () => {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.0)" }}
           >
             <div className="card-body">
-              <h5>{activePlanet.name}</h5>
+              {/* <h5>{activePlanet.name}</h5> */}
               {activePlanet.population && (
                 <p>
                   <strong>Population:</strong> {activePlanet.population}

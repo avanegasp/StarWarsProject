@@ -13,6 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       addToFavorite: (id, name) => {
         const store = getStore();
+        console.log("desde fluxxxxxxxx", id, name);
         setStore({
           favorites: [...store.favorites, { id, name }],
         });

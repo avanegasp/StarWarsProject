@@ -61,6 +61,7 @@ const MapGeneralCharacters = ({ elements }) => {
                       style={{ width: "20rem" }}
                     >
                       <CardExternInfo
+                        name={element.name}
                         id={element.url.split("/")[5]}
                         urlName="characters"
                         altName="Characters"
@@ -106,7 +107,7 @@ const MapGeneralCharacters = ({ elements }) => {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.0)" }}
           >
             <div className="card-body">
-              <h5>{activeElement.name}</h5>
+              {/* <h5>{activeElement.name}</h5> */}
               {activeElement.gender && (
                 <p>
                   <strong>Gender:</strong> {activeElement.gender}

@@ -37,7 +37,9 @@ const Search = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const foundElement = elements.find((element) => element.name === search);
+    const foundElement = elements.find(
+      (element) => element.name.toLowerCase() === search.toLocaleLowerCase()
+    );
     if (foundElement) {
       id = foundElement.url.split("/")[5];
       navigate(`/cardDetail${foundElement.urlName}/${id}`);

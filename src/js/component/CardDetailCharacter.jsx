@@ -9,7 +9,7 @@ const CardDetailCharacter = () => {
 
   useEffect(() => {
     actions.getCharacter(id);
-  }, []);
+  }, [id]);
 
   return (
     <div className="container-fluid">

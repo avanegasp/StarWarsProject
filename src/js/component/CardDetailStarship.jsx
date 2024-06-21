@@ -9,7 +9,7 @@ const CardDetailStarship = () => {
 
   useEffect(() => {
     actions.getStarship(id);
-  }, []);
+  }, [id]);
 
   return (
     <div className="container-fluid">

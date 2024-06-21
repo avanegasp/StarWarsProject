@@ -63,6 +63,7 @@ const MapGeneralStarships = () => {
                       style={{ width: "20rem" }}
                     >
                       <CardExternInfo
+                        name={starship.name}
                         id={starship.url.split("/")[5]}
                         urlName="starships"
                         altName="Starships"
@@ -108,7 +109,7 @@ const MapGeneralStarships = () => {
             style={{ backgroundColor: "rgba(0, 0, 0, 0.0)" }}
           >
             <div className="card-body">
-              <h5>{activeStarship.name}</h5>
+              {/* <h5>{activeStarship.name}</h5> */}
               {activeStarship.model && (
                 <p>
                   <strong>Model:</strong> {activeStarship.model}

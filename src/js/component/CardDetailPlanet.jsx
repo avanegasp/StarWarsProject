@@ -9,7 +9,7 @@ const CardDetailPlanet = () => {
 
   useEffect(() => {
     actions.getPlanet(id);
-  }, []);
+  }, [id]);
 
   return (
     <div className="container-fluid">

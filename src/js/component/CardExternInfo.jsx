@@ -21,11 +21,10 @@ const CardExternInfo = ({
 }) => {
   const { actions } = useContext(Context);
   const navigate = useNavigate();
-
-  async function handleLearnMoreClick() {
-    await actions.getCharacter(id);
+  console.log("Carfavorite", id, name);
+  const handleLearnMoreClick = () => {
     navigate(`/cardDetail${urlName}/${id}`);
-  }
+  };
 
   return (
     <>
