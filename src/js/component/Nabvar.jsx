@@ -6,6 +6,12 @@ import Search from "./Search.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleRadiation } from "@fortawesome/free-solid-svg-icons";
 
+const favsNames = {
+  fontFamily: '"Sahara", sans-serif',
+  color: "white",
+  fontSize: "15px",
+};
+
 const Navbar = () => {
   const { store, actions } = useContext(Context);
 
@@ -41,9 +47,8 @@ const Navbar = () => {
                 <div className="bg-white">
                   {store.favorites.map((favorite, index) => (
                     <div className="d-flex" key={index}>
-                      <p className="dropdown-item text-black">
+                      <p className="dropdown-item text-black" style={favsNames}>
                         {favorite.name}
-                        {console.log("favorite name", favorite.name)}
                       </p>
                       <span
                         className="me-3 mb-3"
