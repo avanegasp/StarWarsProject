@@ -10,6 +10,11 @@
   width: 100%;
 }
 
+.backgroundInfoDetailPlanet {
+  color: beige;
+  background-color: rgba(128, 0, 128, -0.5);
+}
+
 .infoDetailPlanetName {
   font-family: "Heavy Metal Blight", sans-serif;
 }

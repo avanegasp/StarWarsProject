@@ -43,7 +43,7 @@ const InfoDetailPlanet = ({
         }}
       >
         <div className="row align-items-center min-vh-100">
-          <div className="card col-12">
+          <div className="card col-12 backgroundInfoDetailStarship">
             <div className="row d-flex justify-content-center">
               <div className="picture col-5 mt-2">
                 <UrlImage id={id} urlName="starships" altName="Starship" />

@@ -50,7 +50,7 @@ const Search = () => {
 
   return (
     <div className="mx-auto">
-      <div className="input-group mb-3">
+      <div className="input-group mb-3 inputSearch">
         <span className="input-group-text" id="basic-addon1">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </span>
@@ -59,11 +59,14 @@ const Search = () => {
           value={search}
           onChange={handleChange}
           className="form-control"
-          placeholder="Search..."
+          placeholder="I dare you..."
           aria-label="search"
           aria-describedby="basic-addon1"
         />
-        <button className="ms-1" onClick={handleSearch}>
+        <button
+          className="ms-1 btn btn-light buttonSearch"
+          onClick={handleSearch}
+        >
           Search
         </button>
       </div>

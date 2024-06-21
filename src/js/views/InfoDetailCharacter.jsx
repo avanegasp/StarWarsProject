@@ -32,16 +32,16 @@ const InfoDetailCharacter = ({
         }}
       >
         <div className="row row align-items-center min-vh-100">
-          <div className="card col-12">
+          <div className="card col-12 backgroundInfoDetailCharacter">
             <div className="row d-flex justify-content-center">
               <div className="picture col-5 mt-2">
                 <UrlImage id={id} urlName="characters" altName="Character" />
               </div>
               <div className="col-7 mt-5">
-                <h3 className="infoDetailCharacterNameLastname text-center">
+                <h3 className="infoDetailCharacterNameLastname text-center mb-5">
                   {name} {lastName}
                 </h3>
-                <p className="mt-4 descriptionFirstCharacter">
+                <p className="mt-4 descriptionFirstCharacter mt-5 mb-5">
                   {descriptionFirstParagraph}
                 </p>
                 <p className="mt-4 descriptionSecondCharacter ">

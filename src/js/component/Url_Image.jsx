@@ -25,6 +25,7 @@ const UrlImage = ({ id, urlName, altName }) => {
         className="card-img-top"
         alt={altName}
         onError={handleError}
+        style={{ borderRadius: "40px" }}
       />
     </>
   );

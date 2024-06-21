@@ -18,3 +18,8 @@
 .descriptionSecondCharacter {
   font-family: "Sahara", sans-serif;
 }
+
+.backgroundInfoDetailCharacter {
+  color: beige;
+  background-color: rgba(128, 0, 128, -0.5);
+}

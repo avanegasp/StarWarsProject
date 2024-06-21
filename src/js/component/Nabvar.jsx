@@ -41,9 +41,9 @@ const Navbar = () => {
                 <div className="bg-white">
                   {store.favorites.map((favorite, index) => (
                     <div className="d-flex" key={index}>
-                      {console.log("favorite name", store.favorite)}
                       <p className="dropdown-item text-black">
                         {favorite.name}
+                        {console.log("favorite name", favorite.name)}
                       </p>
                       <span
                         className="me-3 mb-3"

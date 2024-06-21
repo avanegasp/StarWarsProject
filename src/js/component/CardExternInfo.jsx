@@ -21,9 +21,20 @@ const CardExternInfo = ({
 }) => {
   const { actions } = useContext(Context);
   const navigate = useNavigate();
-  console.log("Carfavorite", id, name);
   const handleLearnMoreClick = () => {
     navigate(`/cardDetail${urlName}/${id}`);
+  };
+
+  const h5Style = {
+    fontFamily: '"Sahara", sans-serif',
+    color: "red",
+    fontSize: "25px",
+  };
+
+  const h5Styles = {
+    fontFamily: '"Star Wars", sans-serif',
+    color: "white",
+    fontSize: "15px",
   };
 
   return (
@@ -32,7 +43,9 @@ const CardExternInfo = ({
         <div className="carousel-item active">
           <UrlVisualGuide id={id} urlName={urlName} altName={altName} />
           <div className="carousel-caption d-none d-md-block">
-            <h5>{name}</h5>
+            <h5 className="text-danger" style={h5Style}>
+              {name}{" "}
+            </h5>
             <div className="card-body">
               {gender && (
                 <p className="card-text">
@@ -71,10 +84,11 @@ const CardExternInfo = ({
               )}
             </div>
           </div>
-          <div>
+          <div className="mt-1 mb-1">
             <button
               onClick={handleLearnMoreClick}
-              className="btn btn-secondary me-1"
+              className="btn btn-secondary me-1 cardExterInFoDetail"
+              style={h5Styles}
             >
               Details
             </button>
