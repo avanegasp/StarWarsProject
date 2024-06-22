@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       removeToFavorite: (id, name) => {
         const store = getStore();
         const filteredFavorite = store.favorites.filter(
-          (favorite) => favorite.id !== id
+          (favorite) => favorite.name !== id
         );
         setStore({ favorites: filteredFavorite });
       },

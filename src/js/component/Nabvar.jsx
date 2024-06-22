@@ -53,7 +53,7 @@ const Navbar = () => {
                       <span
                         className="me-3 mb-3"
                         onClick={() => {
-                          actions.removeToFavorite(favorite.id);
+                          actions.removeToFavorite(favorite.name);
                         }}
                       >
                         <FontAwesomeIcon icon={faCircleRadiation} />

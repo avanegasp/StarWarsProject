@@ -21,6 +21,7 @@ const CardExternInfo = ({
 }) => {
   const { actions } = useContext(Context);
   const navigate = useNavigate();
+
   const handleLearnMoreClick = () => {
     navigate(`/cardDetail${urlName}/${id}`);
   };
