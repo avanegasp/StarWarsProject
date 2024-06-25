@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "../../styles/CardExternInfo.css";
+// import "../../styles/CardExternInfo.css";
 import { Context } from "../store/appContext.js";
 import { useNavigate } from "react-router-dom";
 import UrlVisualGuide from "./Url_Image.jsx";
