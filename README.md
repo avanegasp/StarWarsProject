@@ -1,5 +1,7 @@
 # Blog de Star Wars
 
+<img width="1436" alt="image" src="https://github.com/user-attachments/assets/b199c400-1682-487c-98a5-8bb4e1e9425e">
+
 En este proyecto,se construyó una versión minimalista del API de Star Wars con una funcionalidad de "favoritos" para que los usuarios puedan guardar sus elementos preferidos.
 
 ## Tecnologías utilizadas:
