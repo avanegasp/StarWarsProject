@@ -12,6 +12,7 @@ En este proyecto,se construyó una versión minimalista del API de Star Wars con
 - **Flask**
 - **Javascript**
 - **Python**
+- **Postman**
 
 ## Características del proyecto:
 
