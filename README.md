@@ -10,7 +10,7 @@ En este proyecto,se construyó una versión minimalista del API de Star Wars con
 - **Bootstrap**
 - **SWAPI (Star Wars API)**
 - **Flask**
-- **Javacript**
+- **Javascript**
 - **Python**
 
 ## Características del proyecto:
