@@ -51,7 +51,7 @@ const Navbar = () => {
                         {favorite.name}
                       </p>
                       <span
-                        className="me-3 mb-3"
+                        className="me-3 mb-3 fs-3"
                         onClick={() => {
                           actions.removeToFavorite(favorite.name);
                         }}
